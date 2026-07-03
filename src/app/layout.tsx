@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,21 +7,28 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-display",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
 export const metadata: Metadata = {
-  title: "Thilagan M.S. | Freelance Full Stack Web Developer",
-  description: "I build fast, modern, responsive, and scalable websites and web applications for startups, businesses, and creators. Expert React, Next.js, Node.js, and MongoDB development.",
+  title: "Thilagan M.S. | Embedded Systems Developer • Web Developer • PCB Designer",
+  description: "Electrical & Electronics Engineering student with a multidisciplinary skill set spanning full-stack web development, embedded systems, and PCB design. Custom hardware and software solutions.",
   keywords: [
-    "Freelance Full Stack Web Developer",
-    "Freelance Web Developer",
+    "Embedded Systems Developer",
+    "PCB Designer",
+    "Web Developer",
+    "Electrical Engineer",
+    "Altium Designer",
+    "KiCad",
     "React Developer",
     "Next.js Developer",
-    "Web Application Developer",
-    "Custom Website Development",
     "Thilagan M.S."
   ],
   authors: [{ name: "Thilagan M.S." }],
@@ -34,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+      <body className={`${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable} antialiased`}>
         {children}
       </body>
     </html>
