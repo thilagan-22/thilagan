@@ -252,8 +252,7 @@ export default function Home() {
       } else {
         throw new Error("EmailJS response error");
       }
-    } catch (error) {
-      console.error("Error sending email via EmailJS (using fallback simulation):", error);
+    } catch (_) {
       // Fallback: show success animation for UI demo
       setFormSubmitted(true);
       setName("");

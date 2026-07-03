@@ -37,7 +37,6 @@ export default function ScrollyCanvas() {
       };
 
       const handleError = () => {
-        console.error(`Failed to load image frame: ${currentFrame(i)}`);
         loadedCount++;
         setLoadProgress(Math.round((loadedCount / totalFrames) * 100));
         if (loadedCount === totalFrames) {
