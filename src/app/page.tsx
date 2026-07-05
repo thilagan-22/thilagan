@@ -252,7 +252,7 @@ export default function Home() {
       } else {
         throw new Error("EmailJS response error");
       }
-    } catch (_) {
+    } catch {
       // Fallback: show success animation for UI demo
       setFormSubmitted(true);
       setName("");
